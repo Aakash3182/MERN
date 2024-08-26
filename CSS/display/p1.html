@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #ccc;
+            padding: 20px;
+        }
+
+        .container div {
+            background-color: orange;
+            color:#fff;
+            font-size: 1.1em;
+            padding: 10px;
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>display</h1>
+    <section class="container">
+        <div class="b1">first</div>
+        <div class="b2">second</div>
+        <div class="b3">third</div>
+    </section>
+
+    <hr>
+
+    <div>
+        <form>
+            <label for="dis">Choose display value</label>
+            <select name="dis" id="dis">
+                <option value="null">choose values</option>
+                <option>block</option>
+                <option>inline-block</option>
+                <option>flex</option>
+                <option>inline-flex</option>
+                <option>grid</option>
+                <option>inline-grid</option>
+                <option>none</option>
+                <option>table</option>
+                <!-- <option>list-view</option> -->
+            </select>
+    </form>
+    </div>
+    
+    <script>
+        var blocks = document.querySelector(".container");
+        var ds = document.getElementById("dis");
+
+        ds.addEventListener("change", function(){
+            blocks.style.display = ds.value;
+        });
+
+    </script>
+
+</body>
+</html>

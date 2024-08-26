@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>close()</h1>
+ <button onclick="handler()">Open Window</button>
+ <button onclick="cls()">close Window</button>
+
+    <script>
+        var x;
+
+        function handler() {
+            // x = open("https://google.com")
+            x = window.open("https://google.com", "sample title", "width=200;height=200")
+        }
+
+        function cls() {
+            x.close()
+        }
+    </script>
+</body>
+</html>

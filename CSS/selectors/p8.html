@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1,.container2 {
+            background-color: #ccc;
+            padding: 20px;
+        }
+
+        .container1 .card {
+            width: 200px;
+            background-color: orangered;
+            padding: 20px;
+        }
+        .container2 .card {
+            width: 200px;
+            background-color: deepskyblue;
+            padding: 20px;
+        }
+
+        
+        .container1 .card ~ p {
+            background-color: cyan;
+            padding: 10px;
+            margin: 5px;
+        }
+        .container2 .card + p {
+            background-color: slateblue;
+            padding: 10px;
+            margin: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Combinators</h1>
+    <h1>General Sibling (~) and Adjacent Sibling (+) </h1>
+    <!--
+    General sibling 
+        it targets sibling before the child (doesn't need to be same)
+    Adjacent Sibling
+        it only selects a child matches the first element
+    -->
+
+    <section class="container1">
+        <div class="card">
+            <h3>Card</h3>
+            <p>smaple data</p>
+        </div>
+
+        <h4>heading</h4>
+        <p>para-1</p>
+        <p>para-2</p>
+        <p>para-3</p>
+    </section>
+
+    <hr>
+    <section class="container2">
+        <div class="card">
+            <h3>Card</h3>
+            <p>smaple data</p>
+        </div>
+
+        <!-- doesn't select the target element if any other element in between -->
+        <!-- <h4>sample heading</h4> -->
+        <p>para-1</p>
+        <p>para-2</p>
+        <p>para-3</p>
+    </section>
+</body>
+</html>

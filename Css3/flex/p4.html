@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            background-color: #2f2d03;
+            padding: 20px;
+            display:flex; /* block is default */
+            flex-direction: row; /* row,row-reverse,column,column-reverse */
+            align-items: flex-start; /* flex-start,flex-end,center,stretch, */
+            justify-content: space-evenly; /* 
+            flex-start -left ,
+            flex-end - right,
+            center,
+            space-between - extreem ends,
+            space-around - equal left and right margin,
+            space-evenly - equal margin between flexes */
+        }
+
+        /* 
+
+        flex-direction is row
+            horizontal -> justify-content -> x axis
+        flex-direction is column
+            verticle -> justify-content -> y axis
+        */
+
+        .box {
+            background-color: #3c5d33;
+            margin: 10px;
+            height: auto;
+            width: auto;
+            padding: 30px;
+        }
+    </style>
+</head>
+<body>
+     <section class="container">
+             <div class="box">box-1</div>
+             <div class="box">box-2</div>
+     </section>
+</body>
+</html>

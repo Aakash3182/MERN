@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            padding: 8px 10px;
+            border: none;
+            font-size: 1.1rem; /* 1em/1rem = 16px */
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #show {
+            background-color: teal;
+            color: #fff;
+        }
+
+        .yes {
+            background-color: green;
+            color:#fff;
+        }
+        .no, .cls {
+            background-color: orangered;
+            color:#fff;
+        }
+        .cls {
+            float: right;
+        }
+
+        dialog {
+            width: 30%;
+        }
+    </style>
+</head>
+<body>
+    <h1>dialog tag</h1>
+    <button id="show">Show Dialog</button>
+    <dialog id="alert">
+        <button class="cls">Close</button>
+         <div>
+            <h1>Alert dialog box</h1>
+            <p>Are you sure to delete the user ?</p>
+            <div class="btn-group">
+                <button class="no">No</button>
+                <button class="yes">Yes</button>
+            </div>
+         </div>
+    </dialog>
+
+    <script>
+        var sh = document.getElementById('show');
+        var cl = document.querySelector('.cls');
+        var al = document.getElementById("alert");
+
+        sh.addEventListener('click',function(){
+            al.show();
+        });
+        cl.addEventListener('click',function(){
+            al.close();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+            div {
+                display: inline-flex;
+                width: 100px;
+                height: auto;
+                background-color: gold;
+                margin: 10px;
+            }
+
+            .b1 {
+                aspect-ratio: 1/1;
+            }
+            .b2 {
+                aspect-ratio: 0.5;
+            }
+            .b3 {
+                aspect-ratio: 1;
+            }
+            .b4 {
+                aspect-ratio: 1/0.5;
+            }
+            .b5 {
+                aspect-ratio: 16/9;
+            }
+    </style>
+</head>
+<body>
+    <h1>aspect ratio</h1>
+    <section class="container">
+        <div class="b1"> 1/1 </div>
+        <div class="b2"> 0.5 </div>
+        <div class="b3"> 1 </div>
+        <div class="b4"> 1/0.5 </div>
+        <div class="b5"> 16/9 </div>
+    </section>
+</body>
+</html>

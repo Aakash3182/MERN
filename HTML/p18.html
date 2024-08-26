@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Forms inputs</h1>
+    <form action="">
+        <label for="">text input</label>
+        <input type="text" name="" id=""> <!-- accepts all characters,numbers,symbols -->
+        <br><br>
+
+        <label for="">number input</label>
+        <input type="number" name="" id=""> <!-- accepts only numbers -->
+        <br><br>
+
+        <label for="">email input</label>
+        <input type="email" name="" id="" placeholder="sample@domain.ext"> <!-- accept only email id -->
+        <br><br>
+
+        <label for="">password</label> 
+        <input type="password" name="" id=""> <!-- same as text type, hide the input -->
+        <br><br>
+
+        <label for="">Date input</label>
+        <input type="date" name="" id=""> <!-- date input is dropdown -->
+        <br><br>
+
+        <label for="">Date time (manual entry ) ( mm/dd/yyyy HH:MM:SS:MS) </label>
+        <input type="datetime" name="" id="" placeholder="mm/dd/yyyy HH:MM:SS:MS">
+        <br><br>
+
+        <label for="">Date time local</label>
+        <input type="datetime-local" name="" id="">
+        <br><br>
+
+        <label for="">Week</label>
+        <input type="week" name="" id="">
+        <br><br>
+
+        <label for="">Time</label>
+        <input type="time" name="" id="">
+        <br><br>
+
+        <label for="">month</label>
+        <input type="month" name="" id="">
+        <br><br>
+
+        <label for="">URL</label>
+        <input type="url" name="" id="" placeholder="https://www.domain.ext"> <!-- url address -->
+         <br><br>
+
+        <label for="">Search</label>
+        <input type="search" name="" id="" placeholder="enter search data"> <!-- hello world => hello+world -->
+        <br><br>
+
+        <label for="">color</label>
+        <input type="color" name="" id=""> <!-- solid colors rgb(0,0,0) - rgb(255,255,255) -->
+        <br><br>
+
+        <label for="">Range <span>*</span> </label>
+        <input type="range" name="weight" id="weight" style="width:50%;" min="0" max="100" value="25" step="5" onchange="getValue()">
+         <h3 id="output"></h3>
+        <br><br>
+    </form>
+    <script>
+            var x = document.getElementById('weight');
+            var out = document.getElementById('output');
+
+            function getValue() {
+                out.innerText = `${x.value} kg`;
+            }
+
+            getValue()
+    </script>
+</body>
+</html>

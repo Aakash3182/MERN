@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Reverse the string - Accept the data through form and print the result in document</h1>
+
+     <form autocomplete="off" method="post">
+         <div>
+            <label for="">Enter Your input</label> <br><br>
+            <input type="text" name="msg" id="msg" required>
+         </div>
+         <div>
+            <button onclick="submitHandler()" type="button">Submit</button>
+         </div>
+     </form>
+     <hr>
+     <!-- output box to print the final input and output -->
+     <div id="output"></div>
+
+     <script>
+        let out = document.getElementById("output");
+
+            function submitHandler() {
+                let msg = document.getElementById('msg').value;
+                let res = "";
+                let i =msg.length - 1;
+                    while(i >= 0) {
+                        res += msg[i];
+                        i--;
+                    }
+                out.innerHTML = `<h1> input = ${msg} and reveresed output = ${res} </h1>`;
+            }
+     </script>
+</body>
+</html>

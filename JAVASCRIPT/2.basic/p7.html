@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result {
+            width:50%;
+            height: 100px;
+            padding: 20px;
+            border: 2px solid #ccc;
+        }
+
+        .res {
+            color: green;
+        }
+        .err {
+            color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <h1> w.a.p to display the result of the student based on obtained marks </h1>
+    <!-- 
+        100% - 80% Distinction
+        80% - 60% first 
+        59.99% - 35% second
+        34.99% - fail
+        -->
+    <form onsubmit="showResult(event)">
+        <label for="marks">Enter Marks</label>
+        <input type="text" name="marks" id="marks" required>
+        <br><br>
+        <input type="submit" value="Show Result">
+    </form>
+
+    <hr>
+
+    <div id="result"></div>
+
+    <script>
+        function showResult(event) {
+            event.preventDefault(); // to avoid page refresh
+            var out = document.getElementById("result");
+            var inp = document.getElementById("marks").value;
+
+            var marks = Number(inp);
+
+            console.log(`marks =`, marks)
+            if((marks > 80) && (marks < 100)) {
+                // document.write(`<h1> Result is Distinction ${marks} </h1>`);
+                // alert(`Result is Distinction ${marks}`);
+                out.innerHTML = `<h1 class="res"> Result is Distinction ${marks} </h1>`;
+            } else if ((marks > 60) && (marks < 80)) {
+                out.innerHTML = `<h1 class="res">Result is First ${marks}</h1>`;
+            } else if ((marks > 35) && (marks < 60)) {
+                out.innerHTML = `<h1 class="res"> Result is Second ${marks} </h1>`;
+            } else if(marks < 35) {
+                out.innerHTML = `<h1 class="res"> Result is Fail ${marks} </h1>`;
+            } else {
+                out.innerHTML = `<h1 class="err"> Check your Input </h1>`;
+            }
+        }
+    </script>
+</body>
+</html>

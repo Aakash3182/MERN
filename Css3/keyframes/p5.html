@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #2c3e40;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 80px;
+            width: 80px;
+        }
+
+        .loader::after,
+        .loader::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 0;
+            width: 0;
+            border:50px solid transparent;
+        }
+
+        .loader::after {
+            border-bottom-color: gold;
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: k1 2s linear 0.5s infinite normal;
+        }
+        .loader::before {
+            border-bottom-color: deepskyblue;
+            transform: rotate(180deg);
+            animation: k2 2s linear infinite reverse;
+        }
+
+        @keyframes k1 {
+            0%,25% { transform: rotate(0deg);}
+            50%,75% { transform: rotate(180deg);}
+            100% { transform: rotate(360deg);}
+        }
+        @keyframes k2 {
+            0%,25% { transform: rotate(90deg);}
+            50%,75% { transform: rotate(270deg);}
+            100% { transform: rotate(450deg);}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="loader"></div>
+    </div>
+</body>
+</html>

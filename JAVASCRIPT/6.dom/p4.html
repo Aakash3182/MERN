@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         #blk {
+            width: 200px;
+            height: 200px;
+            background-color: teal;
+            color: #fff;
+            padding: 20px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+         }
+    </style>
+</head>
+<body>
+    <h1>getElementById(id)</h1>
+
+    <button onclick="handler()">Insert image</button>
+
+    <div id="blk"></div>
+
+    <script>
+        function handler() {
+            // innerHTML -> property of the getElementById to insert html tag with content
+            document.getElementById("blk").innerHTML = "<img src='https://picsum.photos/id/123/200/200'>";
+        }
+    </script>
+</body>
+</html>

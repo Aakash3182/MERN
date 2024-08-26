@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+        }
+
+        .container div {
+            height: 40px;
+            padding: 20px;
+            width: 50%;
+            background-color: teal;
+            margin: 5px;
+        }
+
+        .b1:hover {
+            width: 0%;
+            transition-duration: 5s;
+            transition-timing-function: steps(3,jump-start);
+        }
+        .b2:hover {
+            width: 0%;
+            transition-duration: 5s;
+            transition-timing-function: steps(4,jump-end);
+        }
+        .b3:hover {
+            width: 0%;
+            transition-duration: 5s;
+            transition-timing-function: steps(4,jump-none);
+        }
+        .b4:hover {
+            width: 0%;
+            transition-duration: 5s;
+            transition-timing-function: steps(4,jump-both);
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="b1">jump-start</div>
+        <div class="b2">jump-end</div>
+        <div class="b3">jump-none</div>
+        <div class="b4">jump-both</div>
+    </div>
+</body>
+</html>

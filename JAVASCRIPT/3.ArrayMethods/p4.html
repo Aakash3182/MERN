@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>find and filter</h1>
+
+    <script>
+        // object array
+        var user = [
+                {
+                    id: 1,
+                    first: "Raju",
+                    last: "kumar",
+                    email: "raju@gmail.com"
+                },
+                {
+                    id: 2,
+                    first: "John",
+                    last: "Michel",
+                    email: "john@gmail.com"
+                },
+                {
+                    id: 3,
+                    first: "Raju",
+                    last: "sharma",
+                    email: "raju123@gmail.com"
+                },
+                {
+                    id: 4,
+                    first: "Chand",
+                    last: "sharma",
+                    email: "chandu@gmail.com"
+                }
+            ];
+
+            console.log(`users =`, user)
+
+
+            /* 
+                array.find(function(val){
+                    return condition; // return single set
+                })
+                array.filter(function(val){
+                    return condition; // return array 
+                })
+            */
+
+            var out1 = user.find(function(val){
+                return val.id === 3;
+            })
+            console.log(`find = `, out1)
+
+            var out2 = user.filter(function(val){
+                return val.first === "Raju";
+            })
+            console.log(`filter = `, out2)
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>timer</h1>
+
+    <h2 id="clock"></h2>
+    <script>
+        // interval
+
+        // setInterval(function(){},time)
+        setInterval(function(){
+            let ck = new Date().toLocaleTimeString()
+            document.getElementById("clock").innerText = ck;
+        },1000)  // 1000ms = 1sec
+    </script>
+</body>
+</html>

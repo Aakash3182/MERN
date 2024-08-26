@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array.isArray()</h1>
+    <script>
+        var x = 123;
+        var y = "213";
+        var z = true;
+        var b = {
+            id: 1,
+            name: "john"
+        }
+
+        var nums = [1,2,4,4,5,6,5,5];
+
+        // return false if value is not an array
+        console.log(`x = `, Array.isArray(x))
+        console.log(`y = `, Array.isArray(y))
+        console.log(`z = `, Array.isArray(z))
+        console.log(`b = `, Array.isArray(b))
+        
+
+        // isArrray() return true if value is an array
+        console.log(`nums = `, Array.isArray(nums))
+    </script>
+</body>
+</html>

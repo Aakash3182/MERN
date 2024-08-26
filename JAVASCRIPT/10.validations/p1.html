@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+     <div class="container">
+        <div class="box">
+            <h1>Validating name</h1>
+        </div>
+        <div class="box">
+            <form autocomplete="off" method="post">
+                <div class="form-item">
+                    <label for="user">Username</label>
+                    <input type="text" name="user" id="user" class="form-input" onkeyup="validateName(event)" required>
+                    <span id="u_status"></span>
+                </div>
+                <div class="form-item">
+                    <input type="submit" value="Submit" class="btn success">
+                </div>
+            </form>
+        </div>
+     </div>
+     <script>
+         function validateName(event) {
+            event.preventDefault();
+            let str = document.getElementById('user').value;
+            let status = document.getElementById("u_status");
+
+            // reg exp
+            // let reg = /^[A-Za-z]+$/;    
+            let reg = /^[A-Za-z]{3,10}$/;    
+            if(reg.test(str)) {
+                status.innerText = "valid input"
+                status.style.color = "green"
+            }   else {
+                  status.innerText = "invalid input"
+                status.style.color = "red"
+            }
+         }
+     </script>
+</body>
+</html>

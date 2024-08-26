@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          button {
+            padding: 8px 10px;
+            border: none;
+            font-size: 1.1rem; /* 1em/1rem = 16px */
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #show {
+            background-color: teal;
+            color: #fff;
+        }
+
+        .btn {
+            background-color: green;
+            color:#fff;
+        }
+        .cls {
+            background-color: orangered;
+            color:#fff;
+            float: right;
+        }
+
+        dialog {
+            width: 30%;
+        }
+
+        form {
+            padding: 20px;
+            display:block;
+            margin: 20px;
+        }
+        
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px;
+            gap: 10px;
+        }
+
+        input {
+            padding: 10px 12px;
+            border: 2px solid #999;
+            border-radius: 5px;
+            outline: none;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+     <h1>Login Dialog</h1>
+    
+    <button id="show">Login Here</button>
+
+     <dialog id="login">
+            <button class="cls">Close</button>
+
+            <form>
+                <div class="item">
+                    <label for="user">Username</label>
+                    <input type="text" name="user" id="user" placeholder="enter username" required>
+                </div>
+                <div class="item">
+                    <label for="pass">Password</label>
+                    <input type="password" name="pass" id="pass" placeholder="enter password" required>
+                </div>
+                <div class="item">
+                    <button type="submit" class="btn">Login</button>
+                </div>
+            </form>
+     </dialog>
+
+     <script>
+            let sh = document.getElementById("show");
+            let login = document.getElementById("login");
+            let cl = document.querySelector('.cls');
+
+            sh.onclick = function() {
+                login.show();
+            };
+
+            cl.onclick = function() {
+                login.close();
+            }
+     </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM Siblings</h1>
+
+    <div>
+        <p>sample para 1</p>
+        <p>sample para 2</p>
+        <p>sample para 3</p>
+        <p>sample para 4</p>
+        <p class="fifth">sample para 5</p>
+    </div>
+
+    <script>
+        let first = document.querySelector('p');
+
+        console.log(first); // first node
+        // parentElement
+        console.log(first.parentElement); // div
+        console.log(first.parentElement.parentElement); // body
+        console.log(first.parentElement.parentElement.parentElement); // html
+        console.log(first.parentElement.parentElement.parentElement.parentElement); // null
+        console.log(`\n`)
+
+        // child element
+        let blk = document.querySelector("div");
+
+        console.log(blk.children)
+        console.log(blk.children[0])
+        console.log(blk.children[4])
+        console.log(blk.children[4].innerText) // print the content of the child
+        console.log(`\n`)
+
+        // next element sibling
+        console.log(first.nextElementSibling) // <p>sample para 2 </p>
+        console.log(first.nextElementSibling.textContent) // sample para 2
+        console.log(first.nextElementSibling.nextElementSibling) // <p> sample para 3 </p>
+        console.log(`\n`)
+
+        // previous elemement sibling
+        let fifth = document.querySelector(".fifth")
+        console.log(fifth.previousElementSibling) // <p> sample para 4 </p>
+        console.log(fifth.previousElementSibling.previousElementSibling) // <p> sample para 3 </p>
+
+        console.log(`\n`)
+        // firstElementChild and lastElementChild
+        console.log(blk.firstElementChild)
+        console.log(blk.lastElementChild)
+
+    </script>
+</body>
+</html>

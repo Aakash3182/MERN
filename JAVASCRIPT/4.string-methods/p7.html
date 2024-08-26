@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Reverse the string</h1>
+    <script>
+         var str = "HelloWorld";
+
+
+         console.log(`str = `, str)
+         console.log(`str length= `, str.length)
+         console.log(`str split = `, str.split(""))
+         console.log(`str split & reverse = `, str.split("").reverse())
+         console.log(`str split, reverse & join = `, str.split("").reverse().join(""))
+
+
+         function revStr(word) {
+             let out = "";
+             for(let i=word.length - 1; i >= 0; i--) {
+                 out += word[i]
+             }
+             console.log(`final output =`, out)
+         }
+
+         revStr("Welcome")
+    </script>
+</body>
+</html>

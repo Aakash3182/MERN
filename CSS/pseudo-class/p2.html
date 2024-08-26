@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+        .container {
+            height: 100%;
+            width: 100%;
+            background-color: #ccc;
+            padding: 20px;
+            display: flex;
+        }
+
+        .container div{
+            width: 100%;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        .container div:target {
+            background-color: deepskyblue;
+            color:#fff;
+        }
+
+        nav a:focus {
+            background-color: orangered;
+            padding: 10px 12px;
+            color:#fff;
+        }
+
+        input:focus {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>:focus and :target</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="container">
+        <div id="home">
+            <h1>Home Section</h1>
+        </div>
+        <div id="about">
+            <h1>About Section</h1>
+        </div>
+        <div id="contact">
+            <h1>Contact Section</h1>
+        </div>
+    </section>
+
+    <hr>
+
+    <div>
+        <input type="text" name="" id="">
+    </div>
+</body>
+</html>

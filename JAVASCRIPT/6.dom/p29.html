@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .blk {
+            width: 500px;
+            height:600px;
+            overflow: auto;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>scrollTop</h1>
+
+     <h2 id="output"></h2>
+
+    <div class="blk">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta assumenda quam laudantium hic. Saepe dignissimos fuga, illum quos aut vitae accusantium, deleniti nisi fugit dicta reprehenderit impedit quia architecto adipisci.
+        Molestias eos totam, laudantium fugit, excepturi nesciunt corporis expedita a reprehenderit labore, explicabo voluptate? Error nihil beatae ad quae enim voluptatum, ratione ipsa cumque maxime odio veritatis voluptate ullam ex.
+        Eligendi asperiores similique repudiandae numquam possimus quia quas veritatis? Porro totam ex dolorem sequi tenetur quas quos. Fugit iure saepe omnis hic culpa quas, sunt a iusto, soluta reiciendis natus!
+        Dolore autem culpa exercitationem reprehenderit impedit, explicabo sapiente praesentium in sint quo, molestias odit ut pariatur! Blanditiis perspiciatis accusantium culpa doloremque laborum id voluptas. Dicta culpa debitis error eum hic.
+        Cum commodi assumenda ducimus sequi neque? Optio illo, maiores repellendus illum modi dolores itaque quaerat reprehenderit assumenda sapiente incidunt. Rem id praesentium nulla quibusdam repellat iste vero reprehenderit voluptatibus nemo!
+        Quod distinctio nihil necessitatibus quam deserunt nam aperiam excepturi vel ipsa nisi facilis ipsum illo a modi, maiores reprehenderit ratione voluptas earum tenetur debitis repellendus. Saepe laudantium corrupti nesciunt maiores.
+        Eveniet quod obcaecati adipisci eaque vero expedita tempora neque vel voluptatum tenetur libero, ipsam placeat. Delectus quis, dolore cupiditate, ex corporis molestias numquam iste id animi atque fuga voluptatem harum.
+        Expedita maiores beatae quibusdam rem? Repudiandae distinctio voluptates quae a nostrum nulla error odio nihil! Quo blanditiis explicabo eligendi ipsa ab impedit incidunt cum quos dolores at! Suscipit, porro quae!
+        Amet dolorem consequuntur quidem doloremque possimus natus eos esse! Eligendi magni sequi hic, temporibus fuga ut dolor magnam iste suscipit possimus quae. Deserunt vitae delectus ratione, error iure natus modi.
+        Fuga sit tenetur dolorum eos quidem expedita exercitationem commodi nulla, facere, maxime officiis nam rerum neque facilis corporis, accusamus non error eveniet. Enim dolorem ducimus repellendus dicta consequuntur fugit quo!
+        Debitis quam quae optio a laudantium facilis modi impedit velit veniam similique accusamus nulla consectetur, sunt, obcaecati sapiente deleniti voluptas dolorem recusandae repellendus fugit dignissimos laboriosam harum excepturi iusto. Cumque?
+        Voluptas quo veritatis ea cum alias error nam, expedita, vero, magni reprehenderit unde inventore quod minima aut earum reiciendis eum fugiat at ratione facilis perspiciatis? Dignissimos iusto nobis odio vel!
+        Adipisci, eius. Deleniti ipsam iste veritatis iure quos labore ab ullam earum error delectus officiis, possimus ducimus, sit, facilis quia sequi fugiat a accusamus cumque doloribus! Est officiis odio optio!
+        Vero, dignissimos. Quam veniam explicabo sint quisquam quia! Pariatur impedit temporibus deleniti distinctio facilis, repellendus aspernatur molestias assumenda culpa soluta aut, autem cupiditate delectus voluptatum ex quasi, laboriosam ab quisquam.
+        Reprehenderit nulla minima nam omnis tempora maxime laboriosam veniam odit fugiat a provident nisi nemo magnam molestiae qui assumenda alias excepturi dolores vitae ducimus quia, modi nihil rerum dolor. Iusto.
+        Praesentium, quisquam reprehenderit harum tempora, molestiae sit dolor dolorum nobis ad voluptates enim. Veritatis recusandae libero est deleniti qui ab vitae tenetur? Doloribus corrupti omnis, perspiciatis itaque nihil perferendis molestiae?
+        Laboriosam beatae, ipsum aut fugiat consequatur earum voluptatum. Neque sint, placeat atque deserunt nostrum non provident eum mollitia dolore necessitatibus excepturi repellendus molestiae earum unde quia natus dolorem autem accusantium!
+        Atque, voluptatibus qui aspernatur rerum molestias velit, tenetur quisquam saepe quaerat porro iste facilis totam eos placeat! Deserunt facere quam nesciunt, quidem unde enim perspiciatis quod, blanditiis atque repellendus architecto!
+        Labore consequatur ducimus suscipit praesentium beatae necessitatibus aliquid blanditiis est! Asperiores ut possimus dolorem eum vel perferendis corporis, natus reiciendis autem expedita, temporibus facilis debitis ab hic minus officia quos!
+        Rerum asperiores accusantium reprehenderit alias, eos quam aperiam similique est non magni architecto delectus sequi adipisci ea, sed eveniet. Eius laborum ipsum quidem neque enim quia dolorum a doloribus quam!
+    </div>
+    
+    <script>
+        let blk = document.querySelector(".blk")
+         blk.addEventListener("scroll",function(){
+             console.log(`position =`,blk.scrollTop + "px")
+             document.getElementById("output").innerText  = Math.round(blk.scrollTop) + "px";
+         });
+    </script>
+</body>
+</html>

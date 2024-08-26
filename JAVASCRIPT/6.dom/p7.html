@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #blk {
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            background-color: teal;
+        }
+
+        .btn-link {
+            padding: 10px 12px;
+            background-color: orange;
+            color:#fff;
+            border: none;
+            margin-top: 40px;
+        }
+
+        .circle {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>textContext</h1>
+    <button onclick="handler()">Add Content</button>
+    <div id="blk">
+
+    </div>
+
+    <script>
+        var x =  document.getElementById('blk');
+
+        function handler() {
+            // create a html tags
+            var header = document.createElement('h1');
+            var image = document.createElement('img');
+            var link = document.createElement('a');
+            
+            
+            // add content
+            header.textContent = "Welcome to Javascript";
+            image.src =  "https://picsum.photos/id/124/200/200";
+            link.textContent = "info";
+            link.href = "https://google.com";
+            link.className = "btn-link";
+
+            // add created element with content to existing dom
+            x.appendChild(header);
+            x.appendChild(image);
+            x.appendChild(link);
+        }
+    </script>
+</body>
+</html>

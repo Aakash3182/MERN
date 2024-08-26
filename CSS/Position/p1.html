@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: grey;
+            height: 200vh;
+        }
+        .container {
+            height: 80vh;
+            background-color: orange;
+            padding: 20px;
+            position: relative;
+        }
+
+        .card {
+            background-color: deepskyblue;
+            height:60vh;
+            padding: 20px;
+            /* position: relative; */
+        }
+
+        .card-header {
+            background-color: orangered;
+           height: 50vh;
+        }
+        
+
+        .card-title {
+            background-color: teal;
+            padding: 40px;
+            width: 100px;
+            position: fixed;
+            bottom:0;
+            right:0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>position</h1>
+    <!-- relative, absolute,fixed , sticky -->
+     <!-- top,right,bottom,left -->
+
+    <section class="container">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">
+                    <h3>Sample Card Title</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 
+        1. position relative
+                a. only x(left) and y(top) values can be applicable
+                b. it will take its previous container as parent
+        2. position absolute
+            a. consider 4 sides to change the position
+            b. will take body as referance by default, if any parent have position relative will consider that parent as its ref.
+            c. scrolling is posible
+
+        3. position fixed
+            a. consider all 4 sides
+            b. will take only body as referance by default.
+            c. scrolling is not posible
+    -->
+</body>
+</html>

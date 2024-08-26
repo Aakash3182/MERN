@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .example {
+            background-image: linear-gradient(to bottom right, gold, green);
+            font-size: 2em;
+            padding:0px 16px;
+            border-radius: 16px;
+            margin-left: 10px;
+            /* line-height: 10px; */
+            box-shadow: 8px 3px 4px 10px rgba(0, 0, 0, 0.1);
+            box-decoration-break: clone; /* slice, clone */
+            -webkit-box-decoration-break: clone; /* edge,chrome */
+            -moz-box-decoration-break: clone; /* firefox */
+            -o-box-decoration-break: clone; /* opera,safari */
+        }
+
+        .w1 {
+            color: deepskyblue;
+            font-size: 3rem;
+            font-style: italic;
+        }
+        .w2 {
+            color: orange;
+            font-size: 2.4rem;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1>box-decoration-break</h1>
+    <p>
+        <span class="example">
+            welcome to <br> the css <br> tutorials.
+        </span>
+    </p>
+    <hr>
+    <p>
+        <span class="example">
+            welcome to the css tutorials.
+        </span>
+    </p>
+
+    <hr>
+
+    <h1> <span class="w1">H</span>ello <span class="w2">World</span> </h1>
+</body>
+</html>

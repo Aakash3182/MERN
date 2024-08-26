@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Variables</h1>
+
+    <script>
+    // datatype name = value;
+    /* 
+        var => global scope
+        let => block scope  
+        const => block scope (cann't re assign)
+    */
+        var x = 12; // number
+        var y = 1234.55;
+        
+        var z = 12323454.45454556565;
+
+        var user = "John"; // string
+
+        var isAdmin = false; // boolean
+        
+        var a = null;
+
+        var b = undefined;
+        
+        /* dom(html page), console, Bom(browser object model) */
+
+        // dom
+        document.write("<h1> variable x = " + x  + "</h1>");
+        document.write('<h1> variable y = ' + y + '</h1>');
+
+        document.write(`<h1> variable z = ${z} </h1>`);
+
+        document.write(`<h1> my name is  ${user} </h1>`);
+        document.write(`<h1> isAdmin =  ${isAdmin} </h1>`);
+        document.write(`<h1> null variable =  ${a} </h1>`);
+        document.write(`<h1> undefined variable =  ${b} </h1>`);
+
+
+        // console log
+        console.log("variable x =", x);
+        console.log("type of x =", typeof(x));
+
+        console.log("type of null =", typeof(a));
+        console.log("type of undefined =", typeof(b));
+
+
+        // bom
+        // alert("myname is " + user);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            padding: 20px;
+            border:2px solid #222;
+            margin: 20px;
+        }
+
+        .b1 {
+            text-orientation: upright; /* upright,sideways,sideways-right, mixed */
+            writing-mode: vertical-lr; /* verticle-lr,vertical-rl,horizontal-tb */
+        }
+        .b2 {
+            text-orientation: upright;
+            writing-mode: vertical-rl;
+        }
+        .b3 {
+            text-orientation: sideways;
+            writing-mode: vertical-rl;
+        }
+        .b4 {
+            text-orientation: sideways;
+            writing-mode: vertical-lr; 
+        }
+        .b5 {
+            text-orientation: sideways-right;
+            writing-mode: sideways-rl; /* sideways-lr,sideways-rl */
+        }
+        .b6 {
+            text-orientation: mixed;
+            writing-mode: vertical-lr;
+        }
+    </style>
+</head>
+<body>
+    <h1>text-orientation and writing mode</h1>
+
+    <div class="b1">
+        sample text
+    </div>
+    <div class="b2">
+        sample text
+    </div>
+    <div class="b3">
+        sample text
+    </div>
+    <div class="b4">
+        sample text
+    </div>
+    <div class="b5">
+        sample text
+    </div>
+    <div class="b6">
+        sample text
+    </div>
+</body>
+</html>

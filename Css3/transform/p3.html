@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: block;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .container div {
+            width: 100px;
+            height: 100px;
+            padding: 20px;
+            margin: 10px;
+            background-color: deepskyblue;
+            transition: all 3s;
+        }
+
+        .b1:hover {
+            background-color: orange;
+            transform: rotate(60deg);
+        }
+        .b2:hover {
+            background-color: orangered;
+            transform: rotateX(45deg);
+        }
+        .b3:hover {
+            background-color: teal;
+            transform: rotateY(45deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>transform</h1>
+    <!-- 
+        rotate(deg) -> 2d x,y  rotateX(deg), rotateY(deg) 
+                          3d x,y,z  rotateZ(deg) , rotate3d()
+    -->
+    <section class="container">
+        <div class="b1"></div>
+        <div class="b2"></div>
+        <div class="b3"></div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+        .container {
+            margin: auto;
+            padding: 20px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container div {
+            width: 100px;
+            height: 100px;
+            padding: 20px;
+            margin: 10px;
+            background-color: deepskyblue;
+            transition: all 3s;
+        }
+
+        .b1:hover {
+            background-color: orange;
+            transform: scale(2,2.5);
+        }
+        .b2:hover {
+            background-color: orangered;
+            transform: scaleX(3);
+        }
+        .b3:hover {
+            background-color: teal;
+            transform: scaleY(2);
+        }
+    </style>
+</head>
+<body>
+    <h1>scale</h1>
+    <!-- 
+        magnify (times)
+        scale(x,y) -> 2d x,y  scaleX(x), scaleY(y) 
+                          3d x,y,z  scaleZ(z) , scale3d()
+    -->
+    <section class="container">
+        <div class="b1">
+            scale method
+        </div>
+        <div class="b2"></div>
+        <div class="b3"></div>
+    </section>
+</body>
+</html>

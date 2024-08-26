@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>open()</h1>
+    <!-- open the file path / url => open in new tab / new window -->
+     <a href="https://be-practical.com" target="_blank">Link in new tab</a>
+
+     <br>
+
+    <button onclick="handler1()">Open in Tab</button>
+    <button onclick="handler2()">Open in Window</button>
+    <script>
+        function handler1() {
+            // open(url/path)
+            open("https://be-practical.com")
+        }
+
+        function handler2() {
+            // open(url/path,title,options)
+            open("https://be-practical.com","sample title", "width=400;height=400;")
+        }
+    </script>
+</body>
+</html>
