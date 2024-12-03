@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color: #e1e1e1;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.container{
+    max-width: 800px;
+    margin: 0% auto;
+}
+
+.heroSection{
+    padding: 20px;
+    margin-left: 200px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0% auto;
+}
+
+.container header{
+    padding: 1.5rem;
+    width: 95%;
+    position: relative;
+}
+
+header .title{
+    position: relative;
+    width: fit-content;
+}
+
+header > .title >h1{
+    color: #3b3b3b;
+}
+
+header > .title .underline{
+    height: 4px;
+    width: 70%;
+    background-image: linear-gradient(to right bottom, #20bf65, #01baef);
+    border-radius: 99px;
+
+}
+
+.dashboard,
+.expenseIncomeList {
+    width: 90%;
+    margin: 0% auto;
+    background-image: linear-gradient(to right bottom, #20bf55, #01baef);
+    padding: 20px;
+    border-radius: 12px;
+    color: #fff;
+    user-select: none;
+}
+
+.dashboard .dashboardBottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dashboard #moneyplus{
+    color: gold;
+
+}
+.dashboard #moneyMinus{
+    color: red;
+}
+
+.dashboard .card{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.card .form-item > input {
+    padding : 8px 10px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+}
+
+.card .form-item .btn{
+    padding: 8px 10px;
+    border: none;
+    background-color: orangered;
+    border-radius: 6px;
+    color: #fff;
+    cursor:pointer;
+}
+
+.expenseIncomeList p{
+background : #fff;
+}
+.expenseIncomeList p {
+color :#222;
+}
+
+.expenseIncomeList ul li{
+    color: white;
+    list-style: none;
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    box-shadow: 2px 2px 20px rgb(0,0,0);
+    border-radius: 6px;
+}
+
+.leftItem,
+.rightItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.leftItem {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    line-height: 20px;
+}
+
+.leftItem .txt {
+    font-size: 0.8rem;
+    color: #888;
+    text-transform: capitalize;
+}
+
+.leftItem .price {
+    font-size: 0.9rem;
+    color: #222;
+    text-transform: capitalize;
+}
+
+.rightItem {
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.rightItem .btn {
+    cursor: pointer;
+}
+
+.rightItem .edit {
+    color: deepskyblue;
+}
+
+.rightItem .delete {
+    color: red;
+}
+
+.income {
+    background-color: rgb(0,222,0,0.2);
+}
+
+.expense {
+    background-color: rgb(30, 255, 0,0.2);
+}
+
+@media screen and (max-width: 99px) {
+    .dashboard,
+    .expenseIncomeList {
+        width: 80vw;
+    }
+
+.dashboard .card {
+display: block;
+line-height: 40px;
+}}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .dashboard,
+    .expenseIncomeList{
+        width: 60vw;
+    }
+}

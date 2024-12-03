@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <section class="heroSection">
+        <div class="container">
+            <header>
+                <div class="title">
+                    <h1>Expense Tracker</h1>
+                    <div class="underline"></div>
+                </div>
+            </header>
+
+            <div class="dashboard">
+                <div class="dashboardTop">
+                    <div class="dashboardTopLeft">
+                        <p>Your Balance</p>
+                        <h1 id="balance"> &#8377; 0.00</h1>
+                    </div>
+                </div>
+    
+                <div class="dashboardBottom">
+                    <div class="dashboardBottomLeft">
+                        <p>Income</p>
+                        <h1 id="moneyPlus">&#8377; 0.00</h1>
+                    </div>
+                    
+                    <div class="dashboardBottomRight">
+                        <p>Income</p>
+                     <h1 id="moneyPlus">&#8377; 0.00</h1>
+                    </div>
+     
+                </div>
+                    <div class="dashboardBottomLeft">
+                        <p>Income</p>
+                        <h1 id="moneyPlus">&#8377; 0.00</h1>
+                    </div>    
+            </div>
+
+            
+        <div class="dashboard">
+            <div class="expenseForm">
+                <div class="form-item">
+                    <input type="text" name="title" id="title" placeholder="Enter title" requried>
+                </div>
+                <div class="form-item">
+                    <input type="number" name="amount" id="amount" placeholder="Enter Amount" requried>
+                </div>
+                <div class="form-item">
+                    <button id="submitBtn" class="btn">Add</button>
+                </div>
+            </div>
+
+            <div class="expenseIncomeList">
+                <p>Transaction</p>
+                <ul id="list"></ul>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <script src="./app.js"></script>
+</body>
+</html>
